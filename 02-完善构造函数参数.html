@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>完善构造函数参数</title>
+  <script src="itcast-0.0.2.js"></script>
+  <script>
+    $( function (){
+      console.log( $( '#dv' ) );
+    } );
+  </script>
+</head>
+<body>
+  <div id="dv">
+    <p>123</p>
+  </div>
+  <p id="pp">456</p>
+  <!--<script src="jquery.js"></script>-->
+  
+  <script>
+    // '<p><span>123</span></p><div></div>'
+    function parseHTML ( html ){
+      // 存储所有创建的dom元素
+      var ret = [],
+          div,
+          node;
+
+      div = document.createElement( 'div' );
+      div.innerHTML = html;
+      for ( node = div.firstChild; node; node = node.nextSibling ){
+        if ( node.nodeType === 1 ){
+          ret.push( node );
+        }
+      }
+
+      return ret;
+    }
+
+    // console.log( parseHTML( '<p><span>123</span></p><div></div>' ) );
+    // console.log( $( '<p><span>123</span></p><div></div>' ) );
+    // console.log( $( 'p' ) );
+    // console.log( $( '' ) );
+    // console.log( $( document.querySelector( '#dv' ) ) );
+    // console.log( $( [document.querySelector( '#dv' ), document.querySelector( '#pp' ) ] ) );
+  </script>
+</body>
+</html>

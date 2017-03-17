@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery-get-eq-first-last方法</title>
+</head>
+<body>
+  <div>1dd</div>
+  <div>2dd</div>
+  <div>3dd</div>
+  <ul>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li>
+      <a href="">3</a>
+    </li>
+  </ul> 
+  <!--<script src="jquery.js"></script>-->
+  <script src="itcast-0.0.4.js"></script>
+  <script>
+    var jq = $( 'div' );
+    // var dom = jq.get( 2 );
+    // var $dom = jq.eq( 1 );
+    // var $dom = jq.eq( '1' );
+    // var $dom = jq.eq( -2 );
+    // var $dom = jq.eq();
+
+
+    var $dom = jq.first();
+    $dom = jq.last();
+
+    console.log( $dom );
+   
+    // var j1 = $( 'ul' );
+    // var j2 = j1.find( 'li' );
+    // var j3 = j2.find( 'a' );
+
+    // console.log( j1 );
+    // console.log( j2 );
+    // console.log( j3 );
+  </script>
+</body>
+</html>
